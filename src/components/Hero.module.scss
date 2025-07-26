@@ -1,0 +1,51 @@
+@import "../styles/variables";
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex: 1;
+  height: 100%;
+
+  img {
+    aspect-ratio: 1 / 1;
+    width: 20%;
+    max-width: 180px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  > div {
+    flex: 1;
+  }
+}
+
+.abilities {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+
+  li {
+    padding: 0 0 0 0.7rem;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: $color-primary; // используем background вместо border
+    }
+  }
+}

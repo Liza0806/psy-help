@@ -1,0 +1,123 @@
+@import "../styles/variables";
+
+.skyBackground {
+  position: relative;
+  width: 50%;
+  height: 90vh; 
+  background: url("../../public/nebo.jpg") center/cover no-repeat;
+  overflow: hidden;
+
+  pointer-events: none; // если фон не интерактивный
+}
+.wordRow {
+  span {
+    font-family: $font-cloud-words, cursive;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  &:nth-child(1) {
+    top: 5%;
+    animation-delay: 0s;
+  }
+  &:nth-child(2) {
+    top: 10%;
+    animation-delay: -5s;
+  }
+  &:nth-child(3) {
+    top: 15%;
+    animation-delay: -10s;
+  }
+  &:nth-child(4) {
+    top: 20%;
+    animation-delay: -15s;
+  }
+  &:nth-child(5) {
+    top: 25%;
+    animation-delay: -20s;
+  }
+  &:nth-child(6) {
+    top: 30%;
+    animation-delay: -25s;
+  }
+  &:nth-child(7) {
+    top: 35%;
+    animation-delay: -30s;
+  }
+  &:nth-child(8) {
+    top: 40%;
+    animation-delay: -35s;
+  }
+  &:nth-child(9) {
+    top: 5%;
+    animation-delay: 40s;
+  }
+  &:nth-child(10) {
+    top: 45%;
+    animation-delay: -45s;
+  }
+  &:nth-child(11) {
+    top: 50%;
+    animation-delay: -50s;
+  }
+  &:nth-child(12) {
+    top: 55%;
+    animation-delay: -55s;
+  }
+  &:nth-child(13) {
+    top: 60%;
+    animation-delay: -60s;
+  }
+  &:nth-child(14) {
+    top: 65%;
+    animation-delay: -65s;
+  }
+  &:nth-child(15) {
+    top: 70%;
+    animation-delay: -70s;
+  }
+  &:nth-child(16) {
+    top: 75%;
+    animation-delay: -75s;
+  }
+  &:nth-child(17) {
+    top: 5%;
+    animation-delay: 80s;
+  }
+  &:nth-child(18) {
+    top: 80%;
+    animation-delay: -85s;
+  }
+  &:nth-child(19) {
+    top: 85%;
+    animation-delay: -90s;
+  }
+  &:nth-child(20) {
+    top: 90%;
+    animation-delay: -95s;
+  }
+  &:nth-child(21) {
+    top: 95%;
+    animation-delay: -100s;
+  }
+  .wordTrack {
+    display: inline-flex;
+    animation: scrollWords 60s linear;
+  }
+
+  span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 4rem;
+  }
+}
+
+@keyframes scrollWords {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

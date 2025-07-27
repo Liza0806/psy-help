@@ -82,7 +82,10 @@ type TranslationKeys =
   | "workFormat.familyDescription2"
   | "workFormat.familyPrice"
   | "workFormat.button"
-  | "heroWords";
+  | "heroWords"
+  | "errorTitle"
+  | "errorMessage"
+  | "backHome";
 
 type Translations = {
   [key in TranslationKeys]: string | Array<string>;
@@ -165,7 +168,11 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
       "Робота ведеться з усіма членами родини, які відчувають труднощі в спілкуванні. Найчастіше пари звертаються для відновлення, реабілітації та оновлення стосунків.",
     "workFormat.familyPrice": "60 € — 75 хвилин",
     "workFormat.button": "Записатися на консультацію",
-    heroWords: [
+    "errorTitle": "Щось пішло не так...",
+    "errorMessage":
+      "Вибачте, сталася помилка. Будь ласка, спробуйте перезавантажити сторінку або поверніться на головну.",
+    "backHome": "Повернутись на головну",
+    "heroWords": [
       "Натхнення",
       "Впевненість",
       "Сила",
@@ -262,7 +269,11 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
       "Работа ведётся со всеми членами семьи, которые испытывают трудности в общении. Чаще всего пары приходят для восстановления, реабилитации и обновления отношений.",
     "workFormat.familyPrice": "60 € — 75 минут",
     "workFormat.button": "Записаться на консультацию",
-    heroWords: [
+    "errorTitle": "Что-то пошло не так...",
+    "errorMessage":
+      "Извините, произошла ошибка. Пожалуйста, попробуйте перезагрузить страницу или вернитесь на главную.",
+    "backHome": "Вернуться на главную",
+    "heroWords": [
       "Вдохновение",
       "Уверенность",
       "Сила",
@@ -357,7 +368,11 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
       "Work is carried out with all family members who experience communication difficulties. Most often, couples come for restoration, rehabilitation, and relationship renewal.",
     "workFormat.familyPrice": "60 € — 75 minutes",
     "workFormat.button": "Book an appointment",
-    heroWords: [
+    "errorTitle": "Something went wrong...",
+    "errorMessage":
+      "Sorry, an error occurred. Please try refreshing the page or go back to the homepage.",
+    "backHome": "Go back home",
+    "heroWords": [
       "Inspiration",
       "Confidence",
       "Strength",

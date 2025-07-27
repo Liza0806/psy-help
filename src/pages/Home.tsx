@@ -7,6 +7,7 @@ import AboutMini from "../components/AboutMini";
 import ServicesList from "../components/ServicesList";
 import WorkFormat from "../components/WorkFormat";
 import Hero from "../components/Hero";
+import BuggyComponent from "../components/BuggyComponent";
 
 const Home: FC = () => {
 
@@ -29,6 +30,7 @@ const Home: FC = () => {
 
   return (
     <div>
+      <BuggyComponent/>
       <PageMeta
         title="Обо мне — Владимир Борисенко"
         description="Опытный психиатр с более чем 30-летним стажем..."

@@ -1,0 +1,1 @@
+import{j as e,P as r}from"./index-B9LwwZdC.js";const t=()=>e.jsxs("div",{children:[e.jsx(r,{title:"Обо мне — Владимир Борисенко",description:"Опытный психиатр с более чем 30-летним стажем..."}),e.jsx("h1",{children:"HowWeWillWork"})]});export{t as default};

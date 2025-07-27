@@ -9,13 +9,13 @@ const Layout = () => {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <div className={cls.layoutWrapper}>
       <Helmet>
         <title>{t('meta.title')}</title>
         <meta name="description" content={t('meta.description')} />
       </Helmet>
       <Header />
-      <main className={cls.main}>
+      <main className={cls.content}>
         <Outlet />
       </main>
       <Footer />

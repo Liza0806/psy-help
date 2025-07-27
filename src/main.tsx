@@ -10,14 +10,15 @@ import GlobalErrorBoundary from "./components/GlobalErrorBoundary";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <GlobalErrorBoundary>
+ 
       <LanguageProvider>
         <HelmetProvider>
           <BrowserRouter>
-            <App />
+             <GlobalErrorBoundary>
+              <App />
+             </GlobalErrorBoundary>
           </BrowserRouter>
         </HelmetProvider>
       </LanguageProvider>
-    </GlobalErrorBoundary>
   </React.StrictMode>
 );

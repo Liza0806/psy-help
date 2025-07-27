@@ -5,22 +5,22 @@ import NotFound from './pages/NotFound';
 import BuggyComponent from './components/BuggyComponent';
 import ErrorBoundaryPage from './pages/ErrorBoundaryPage';
 import GlobalErrorCatcher from './hooks/GlobalErrorCatcher';
+import Loader from './components/Loader';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
-const HowWeWillWork = lazy(() => import('./pages/HowWeWillWork'));
+const WorkInfoSection = lazy(() => import('./pages/WorkInfoSection'));
 const Options = lazy(() => import('./pages/Options'));
 
 function App() {
   return (
-    <Suspense fallback={<div>Загрузка...</div>}>
+    <Suspense fallback={<Loader/>}>
        <GlobalErrorCatcher /> 
       <Routes>
         <Route path="/" element={<Layout />} > 
-   {/*      //errorElement={<ErrorBoundaryPage />} */}
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="howWeWillWork" element={<HowWeWillWork />} />
+          <Route path="WorkInfoSection" element={<WorkInfoSection />} />
           <Route path="options" element={<Options />} />
           <Route path="error" element={<ErrorBoundaryPage />} />
           <Route path="*" element={<NotFound />} />

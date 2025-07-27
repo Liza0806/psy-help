@@ -1,25 +1,62 @@
-@import '../styles/variables';
+@use "../styles/variables" as *;
 
 .footer {
-  background-color: $color-primary;
-  color: #fff;
-  padding: 1.5rem 0;
-  text-align: center;
-  font-size: 0.9rem;
+  background: $color-primary;
+  padding: 2rem 1rem;
+  color: $color-background;
 
+   
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: space-around;
+    align-items: center;
+
+ @media (max-width:768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
     a {
-      color: #fff;
-      text-decoration: underline;
+      color: inherit;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
 
       &:hover {
-        text-decoration: none;
+        text-decoration: underline;
       }
+
+      svg {
+        font-size: 1.2rem;
+        color: $color-background;
+      }
+    }
+
+    p {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .bottomInfo {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+
+    @media (max-width:768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
     }
   }
 }

@@ -1,4 +1,4 @@
-@import "../styles/variables";
+@use "../styles/variables" as *;
 
 .header {
   width: 100%;
@@ -7,7 +7,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,6 +83,127 @@
     &.active {
       color: $color-primary;
       border-bottom: 2px solid $color-primary;
+    }
+  }
+}
+.header {
+  display: flex;
+  padding: 1rem 2rem;
+  z-index: 9999;
+
+  @media (max-width: 768px) {
+    position: sticky;
+    background-color: $color-primary;
+  }
+
+  nav {
+    display: flex;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: $color-primary;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease-in-out;
+      z-index: 9999;
+      &.open {
+        max-height: 500px;
+      }
+    }
+  }
+
+  .link {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-secondary;
+    }
+
+    @media (max-width: 768px) {
+      color: white;
+      &.active {
+        color: $color-accent-light;
+      }
+
+      &:hover {
+        color: $color-accent-light;
+      }
+    }
+  }
+
+  .active {
+    color: $color-secondary;
+    border-bottom: 2px solid $color-secondary;
+  }
+
+  .languageSwitcher {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      @media (max-width: 768px) {
+        color: white;
+        &.active {
+          color: $color-muted;
+        }
+
+        &:hover {
+          color: $color-muted;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 1rem;
+      right: 3rem;
+    }
+  }
+
+  .burger {
+    display: none;
+    width: 2rem;
+    height: 1.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 11;
+
+    span {
+      height: 3px;
+      background: white;
+      width: 100%;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    &.open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    &.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.open span:nth-child(3) {
+      transform: translateY(-12px) rotate(-45deg);
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
     }
   }
 }

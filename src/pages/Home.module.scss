@@ -1,4 +1,4 @@
-@import "../styles/variables";
+@use "../styles/variables" as *;
 
 .section {
   width: 85vw;
@@ -16,6 +16,9 @@
   line-height: 1.5;
   overflow: hidden;
 
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   h1 {
     display: inline-flex;
     align-items: center;

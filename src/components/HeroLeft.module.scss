@@ -1,13 +1,17 @@
-@import "../styles/variables";
+@use "../styles/variables" as *;
 
 .skyBackground {
   position: relative;
   width: 50%;
-  height: 90vh; 
+  height: 80vh; 
   background: url("../../public/nebo.jpg") center/cover no-repeat;
   overflow: hidden;
+  pointer-events: none; 
 
-  pointer-events: none; // если фон не интерактивный
+     @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+     }
 }
 .wordRow {
   span {

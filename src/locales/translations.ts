@@ -23,7 +23,7 @@ type TranslationKeys =
   | "footer.subtitle"
   | "header.home"
   | "header.about"
-  | "header.howWeWillWork"
+  | "header.WorkInfoSection"
   | "header.contacts"
   | "aboutMini.title"
   | "aboutMini.paragraph1"
@@ -36,7 +36,7 @@ type TranslationKeys =
   | "footer.subtitle"
   | "header.home"
   | "header.about"
-  | "header.howWeWillWork"
+  | "header.WorkInfoSection"
   | "header.contacts"
   | "hero.name"
   | "hero.subtitle"
@@ -85,7 +85,32 @@ type TranslationKeys =
   | "heroWords"
   | "errorTitle"
   | "errorMessage"
-  | "backHome";
+  | "backHome"
+ | "titleNotFound"
+| "descriptionNotFound"
+|"homeButtonNotFound"
+| "backButtonNotFound"
+| "metaTitleNotFound"
+| "metaDescriptionNotFound"
+| "chargingTheDayForSuccess"
+| "workStartTitle"
+| "workStartDescription"
+| "workFormatsTitle"
+| "workFormatsDescription"
+| "workOrganizationalTitle"
+| "workOrganizationalDescription"
+| "workSimpleTitle"
+| "workSimpleDescription"
+| "workStartTitle"
+| "workStartDescription"
+| "workFormatsTitle"
+| "workFormatsDescription"
+| "workOrganizationalTitle"
+| "workOrganizationalDescription"
+| "workSimpleTitle"
+| "workSimpleDescription"
+|"footerSubtitle"
+| "footerContactTitle"
 
 type Translations = {
   [key in TranslationKeys]: string | Array<string>;
@@ -108,7 +133,7 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
     "footer.subtitle": "Лікар-психіатр, психотерапевт",
     "header.home": "Головна",
     "header.about": "Про мене",
-    "header.howWeWillWork": "Як ми будемо працювати",
+    "header.WorkInfoSection": "Як ми будемо працювати",
     "header.contacts": "Контакти",
     "hero.name": "Борисенко Володимир Васильович",
     "hero.subtitle":
@@ -172,6 +197,24 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
     "errorMessage":
       "Вибачте, сталася помилка. Будь ласка, спробуйте перезавантажити сторінку або поверніться на головну.",
     "backHome": "Повернутись на головну",
+      "titleNotFound": "404",
+    "descriptionNotFound": "Інколи нам важко знайти навіть себе. Що вже казати про цю сторінку?..",
+    "homeButtonNotFound": "Повернутися на головну",
+    "backButtonNotFound": "Назад",
+    "metaTitleNotFound": "404 — Сторінка не знайдена",
+    "metaDescriptionNotFound": "Вибачте, запитувана сторінка не існує.",
+  "chargingTheDayForSuccess": "Заряджаємо день на успіх...",
+    "workStartTitle": "Як ми почнемо працювати?",
+  "workStartDescription": "Наше знайомство завжди починається з попереднього запису. Ви можете написати мені повідомлення або залишити заявку на сайті — ми підберемо зручний для вас час.\n\nНа першій консультації ми спокійно обговоримо, що привело вас до мене. Неважливо, чи є у вас готова тема для розмови, чи просто є відчуття, що «щось не так» — моя задача допомогти розібратись.\n\nПерша зустріч триває 50 хвилин.",
+  "workFormatsTitle": "Як проходять консультації?",
+  "workFormatsDescription": "Існує два формати роботи:\n\nКороткострокові консультації (5-10 зустрічей) — якщо ви хочете вирішити конкретне питання або ситуацію.\n\nДовготривала терапія (від 10 зустрічей) — якщо важливо глибше пропрацювати внутрішні причини, змінити звичні сценарії та стосунки.\n\nРазом ми визначимо, який шлях підійде саме вам.",
+  "workOrganizationalTitle": "Кілька організаційних моментів",
+  "workOrganizationalDescription": "Щоб наша співпраця була комфортною:\n\nКонсультація триває 50 хвилин.\nРекомендована частота зустрічей — 1 раз на тиждень.\nОнлайн-сесії проходять по передоплаті.\n\nЯкщо не виходить прийти — прошу попередити не пізніше, ніж за 24 години. Інакше, сесія вважається проведеною.\n\nЯкщо ви запізнюєтесь — ми працюємо залишений час.\n\nВажливо: я не даю порад «як правильно жити». Замість цього — допомагаю вам почути себе і прийняти власні рішення.",
+  "workSimpleTitle": "Простими словами",
+  "workSimpleDescription": "Ви можете прийти до мене, навіть якщо не знаєте, з чого почати.\nВаше завдання — просто прийти, моє — допомогти вам знайти відповіді.",
+"footerContactTitle": "Контактна інформація:",
+"footerSubtitle": "Психологічна допомога онлайн",
+
     "heroWords": [
       "Натхнення",
       "Впевненість",
@@ -206,7 +249,7 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
     "footer.subtitle": "Врач-психиатр, психотерапевт",
     "header.home": "Главная",
     "header.about": "Обо мне",
-    "header.howWeWillWork": "Как мы будем работать",
+    "header.WorkInfoSection": "Как мы будем работать",
     "header.contacts": "Контакты",
     "hero.name": "Борисенко Владимир Васильевич",
     "hero.subtitle":
@@ -273,6 +316,23 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
     "errorMessage":
       "Извините, произошла ошибка. Пожалуйста, попробуйте перезагрузить страницу или вернитесь на главную.",
     "backHome": "Вернуться на главную",
+      "titleNotFound": "404",
+    "descriptionNotFound": "Иногда нам сложно найти даже себя. Что уже говорить об этой странице?..",
+    "homeButtonNotFound": "Вернуться на главную",
+    "backButtonNotFound": "Назад",
+    "metaTitleNotFound": "404 — Страница не найдена",
+    "metaDescriptionNotFound": "Извините, запрашиваемая страница не существует.",
+ "chargingTheDayForSuccess": "Заряжаем день на успех...",
+   "workStartTitle": "Как мы начнем работать?",
+  "workStartDescription": "Наше знакомство всегда начинается с предварительной записи. Вы можете написать мне сообщение или оставить заявку на сайте — мы подберем удобное для вас время.\n\nНа первой консультации мы спокойно обсудим, что вас привело ко мне. Неважно, есть ли у вас готовая тема для разговора или просто ощущение, что «что-то не так» — моя задача помочь разобраться.\n\nПервая встреча длится 50 минут.",
+  "workFormatsTitle": "Как проходят консультации?",
+  "workFormatsDescription": "Существует два формата работы:\n\nКраткосрочные консультации (5-10 встреч) — если вы хотите решить конкретный вопрос или ситуацию.\n\nДлительная терапия (от 10 встреч) — если важно глубже проработать внутренние причины, изменить привычные сценарии и отношения.\n\nВместе мы определим, какой путь подойдет именно вам.",
+  "workOrganizationalTitle": "Несколько организационных моментов",
+  "workOrganizationalDescription": "Чтобы наше сотрудничество было комфортным:\n\nКонсультация длится 50 минут.\nРекомендуемая частота встреч — 1 раз в неделю.\nОнлайн-сессии проходят по предоплате.\n\nЕсли не получается прийти — прошу предупредить минимум за 24 часа. В противном случае, сессия считается проведенной.\n\nЕсли вы опаздываете — мы работаем оставшееся время.\n\nВажно: я не даю советов «как правильно жить». Вместо этого — помогаю вам услышать себя и принять собственные решения.",
+  "workSimpleTitle": "Простыми словами",
+  "workSimpleDescription": "Вы можете прийти ко мне, даже если не знаете, с чего начать.\nВаша задача — просто прийти, моя — помочь вам найти ответы.",
+"footerContactTitle": "Контактная информация:",
+"footerSubtitle": "Психологеская помощь онлайн",
     "heroWords": [
       "Вдохновение",
       "Уверенность",
@@ -307,7 +367,7 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
     "footer.subtitle": "Psychiatrist, Psychotherapist",
     "header.home": "Home",
     "header.about": "About me",
-    "header.howWeWillWork": "How we will work",
+    "header.WorkInfoSection": "How we will work",
     "header.contacts": "Contacts",
     "hero.name": "Borysenko Volodymyr Vasylovych",
     "hero.subtitle":
@@ -372,6 +432,24 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
     "errorMessage":
       "Sorry, an error occurred. Please try refreshing the page or go back to the homepage.",
     "backHome": "Go back home",
+       "titleNotFound": "404",
+    "descriptionNotFound": "Sometimes it's hard to find even ourselves. Let alone this page...",
+    "homeButtonNotFound": "Go to Homepage",
+    "backButtonNotFound": "Back",
+    "metaTitleNotFound": "404 — Page Not Found",
+    "metaDescriptionNotFound": "Sorry, the requested page does not exist.",
+  "chargingTheDayForSuccess": "Charging the day for success...",
+  "workStartTitle": "How Will We Start Working Together?",
+  "workStartDescription": "Our acquaintance always begins with a scheduled appointment. You can send me a message or leave a request on the website — we’ll find a convenient time for you.\n\nDuring the first consultation, we will calmly discuss what brought you to me. It doesn’t matter if you have a clear topic to discuss or just a feeling that 'something’s not right' — my task is to help you figure it out.\n\nThe first meeting lasts 50 minutes.",
+  "workFormatsTitle": "How Do Consultations Work?",
+  "workFormatsDescription": "There are two formats of work:\n\nShort-term consultations (5-10 sessions) — if you want to resolve a specific issue or situation.\n\nLong-term therapy (from 10 sessions) — if it’s important to deeply work through internal causes, change habitual patterns and relationships.\n\nTogether we will determine which path suits you best.",
+  "workOrganizationalTitle": "A Few Organizational Points",
+  "workOrganizationalDescription": "To make our collaboration comfortable:\n\nA consultation lasts 50 minutes.\nRecommended frequency — once a week.\nOnline sessions are prepaid.\n\nIf you can’t attend — please notify me at least 24 hours in advance. Otherwise, the session is considered held.\n\nIf you’re late — we work for the remaining time.\n\nImportant: I don’t give advice on 'how to live correctly.' Instead, I help you hear yourself and make your own decisions.",
+  "workSimpleTitle": "In Simple Terms",
+  "workSimpleDescription": "You can come to me even if you don’t know where to start.\nYour task is simply to come, and mine — to help you find the answers.",
+"footerContactTitle": "Contact Information:",
+"footerSubtitle": "Online Psychological Support",
+
     "heroWords": [
       "Inspiration",
       "Confidence",

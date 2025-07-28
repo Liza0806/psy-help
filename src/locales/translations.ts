@@ -189,13 +189,13 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
     "workFormat.individualTitle": "Індивідуальна консультація",
     "workFormat.individualDescription":
       "Психологічна консультація та психотерапія онлайн.",
-    "workFormat.individualPrice": "40 € — 50 хвилин",
+    "workFormat.individualPrice": "1000 ₴ — 50 хвилин",
     "workFormat.familyTitle": "Сімейне консультування",
     "workFormat.familyDescription1":
       "Сімейне консультування та психотерапія пар спрямовані на корекцію стосунків та усунення емоційних труднощів у родині.",
     "workFormat.familyDescription2":
       "Робота ведеться з усіма членами родини, які відчувають труднощі в спілкуванні. Найчастіше пари звертаються для відновлення, реабілітації та оновлення стосунків.",
-    "workFormat.familyPrice": "60 € — 75 хвилин",
+    "workFormat.familyPrice": "1300 ₴ — 75 хвилин",
     "workFormat.button": "Записатися на консультацію",
     "errorTitle": "Щось пішло не так...",
     "errorMessage":
@@ -312,13 +312,13 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
     "workFormat.individualTitle": "Индивидуальная консультация",
     "workFormat.individualDescription":
       "Психологическая консультация и психотерапия онлайн.",
-    "workFormat.individualPrice": "40 € — 50 минут",
+    "workFormat.individualPrice": "1000 ₴— 50 минут",
     "workFormat.familyTitle": "Семейное консультирование",
     "workFormat.familyDescription1":
       "Семейное консультирование и психотерапия пар направлены на коррекцию отношений и устранение эмоциональных трудностей в семье.",
     "workFormat.familyDescription2":
       "Работа ведётся со всеми членами семьи, которые испытывают трудности в общении. Чаще всего пары приходят для восстановления, реабилитации и обновления отношений.",
-    "workFormat.familyPrice": "60 € — 75 минут",
+    "workFormat.familyPrice": "1300 ₴ — 75 минут",
     "workFormat.button": "Записаться на консультацию",
     "errorTitle": "Что-то пошло не так...",
     "errorMessage":
@@ -433,13 +433,13 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
     "workFormat.individualTitle": "Individual Consultation",
     "workFormat.individualDescription":
       "Psychological consultation and psychotherapy online.",
-    "workFormat.individualPrice": "40 € — 50 minutes",
+    "workFormat.individualPrice": "1000 ₴ — 50 minutes",
     "workFormat.familyTitle": "Family Counseling",
     "workFormat.familyDescription1":
       "Family counseling and couples therapy aimed at correcting relationships and resolving emotional difficulties within the family.",
     "workFormat.familyDescription2":
       "Work is carried out with all family members who experience communication difficulties. Most often, couples come for restoration, rehabilitation, and relationship renewal.",
-    "workFormat.familyPrice": "60 € — 75 minutes",
+    "workFormat.familyPrice": "1300 ₴ — 75 minutes",
     "workFormat.button": "Book an appointment",
     "errorTitle": "Something went wrong...",
     "errorMessage":

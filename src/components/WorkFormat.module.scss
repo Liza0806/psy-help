@@ -69,6 +69,11 @@
   flex: 0 1 35%;
   text-align: left;
 
+    @media (max-width: 968px) {
+      flex: 0 1 100%;
+    }
+
+
   h3 {
     font-family: $font-family-heading;
     font-size: 1.2rem;

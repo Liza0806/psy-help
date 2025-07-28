@@ -111,6 +111,10 @@ type TranslationKeys =
 | "workSimpleDescription"
 |"footerSubtitle"
 | "footerContactTitle"
+| "modal.call"
+| "modal.close"
+| "modal.ask"
+| "workSectionBottom"
 
 type Translations = {
   [key in TranslationKeys]: string | Array<string>;
@@ -214,6 +218,10 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
   "workSimpleDescription": "Ви можете прийти до мене, навіть якщо не знаєте, з чого почати.\nВаше завдання — просто прийти, моє — допомогти вам знайти відповіді.",
 "footerContactTitle": "Контактна інформація:",
 "footerSubtitle": "Психологічна допомога онлайн",
+"modal.call": "Зателефонувати",
+"modal.close": "Закрити", 
+"modal.ask": "Як вам зручніше записатися?",
+"workSectionBottom": "Ваше місце сили", 
 
     "heroWords": [
       "Натхнення",
@@ -333,6 +341,11 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
   "workSimpleDescription": "Вы можете прийти ко мне, даже если не знаете, с чего начать.\nВаша задача — просто прийти, моя — помочь вам найти ответы.",
 "footerContactTitle": "Контактная информация:",
 "footerSubtitle": "Психологеская помощь онлайн",
+"modal.call": "Позвонить",
+"modal.close": "Закрыть", 
+"modal.ask": "Как вам удобнее записаться?",
+"workSectionBottom": "Ваше место силы", 
+
     "heroWords": [
       "Вдохновение",
       "Уверенность",
@@ -449,8 +462,12 @@ export const translations: Record<"UA" | "RU" | "EN", Translations> = {
   "workSimpleDescription": "You can come to me even if you don’t know where to start.\nYour task is simply to come, and mine — to help you find the answers.",
 "footerContactTitle": "Contact Information:",
 "footerSubtitle": "Online Psychological Support",
+"modal.ask": "How would you prefer to book an appointment?",
+"modal.call": "Call",
+"modal.close": "Close window", 
+"workSectionBottom": "Your place of power", 
 
-    "heroWords": [
+    "heroWords": [ 
       "Inspiration",
       "Confidence",
       "Strength",

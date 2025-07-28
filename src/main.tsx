@@ -7,18 +7,23 @@ import "./reset.scss";
 import "./index.scss";
 import { LanguageProvider } from "./context/LanguageContext";
 import GlobalErrorBoundary from "./components/GlobalErrorBoundary";
+import { ModalProvider } from "./context/ModalContext";
+
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
  
       <LanguageProvider>
-        <HelmetProvider>
+          <ModalProvider>
+               <HelmetProvider>
           <BrowserRouter>
              <GlobalErrorBoundary>
               <App />
              </GlobalErrorBoundary>
           </BrowserRouter>
         </HelmetProvider>
+          </ModalProvider>
       </LanguageProvider>
   </React.StrictMode>
 );
+

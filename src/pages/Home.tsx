@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import PageMeta from "../components/PageMeta";
 import cls from "./Home.module.scss";
 import QuoteBlock from "../components/QuoteBlock";
@@ -7,7 +7,8 @@ import AboutMini from "../components/AboutMini";
 import ServicesList from "../components/ServicesList";
 import WorkFormat from "../components/WorkFormat";
 import Hero from "../components/Hero";
-
+import ConsultationModal from "../components/ConsultationModal";
+import { useLocation } from "react-router";
 
 const Home: FC = () => {
 
@@ -27,6 +28,16 @@ const Home: FC = () => {
     threshold: 0.3,
     triggerOnce: true,
   });
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const scrollPosition = localStorage.getItem("scrollPosition");
+    if (scrollPosition) {
+      window.scrollTo(0, parseInt(scrollPosition, 10));
+      localStorage.removeItem("scrollPosition"); 
+    }
+  }, [location]);
 
   return (
     <div>
@@ -63,14 +74,15 @@ const Home: FC = () => {
       </section>
       <section className={`${cls.image2} ${cls.parallaxSection}`} ref={ref2}>
         <QuoteBlock
-          text="Служил Гаврила за прилавком.
-Гаврила флейтой торговал…"
+          text="Служил Гаврила хлебопеком,
+Гаврила булку испекал…"
           isVisible={inView2}
         />
       </section>
       <section className={cls.section}>
         <WorkFormat />
       </section>
+       <ConsultationModal />
     </div>
   );
 };

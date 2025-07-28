@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import cls from "./WorkFormat.module.scss";
 import Button from "./Button";
 import { useTranslation } from "../hooks/useTranslation";
+import { useModalContext } from "../context/ModalContext";
 
 const WorkFormat = () => {
   const { ref, inView } = useInView({
@@ -12,6 +13,7 @@ const WorkFormat = () => {
 
   const [visible, setVisible] = useState(false);
   const { t } = useTranslation();
+  const { openModal } = useModalContext();
 
   useEffect(() => {
     if (inView) {
@@ -46,7 +48,7 @@ const WorkFormat = () => {
         </div>
       </div>
 
-      <Button text={t('workFormat.button')} onClick={() => {}} />
+      <Button text={t('workFormat.button')} onClick={openModal} />
     </section>
   );
 };

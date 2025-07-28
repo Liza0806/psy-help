@@ -61,7 +61,7 @@ const WorkInfoSection = () => {
         ))}
       </div>
 
-      <div className={cls.whisper}>Ваше место силы</div>
+      <div className={cls.whisper}>{t("workSectionBottom")}</div>
     </section>
   );
 };

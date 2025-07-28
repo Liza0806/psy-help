@@ -1,0 +1,131 @@
+@use "../styles/variables" as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.openButton {
+  background-color: $color-secondary;
+  color: $color-surface;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $color-primary;
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: $color-surface;
+  padding: 24px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+}
+.fadeIn {
+  animation: fadeIn 0.3s ease;
+}
+.fadeOut {
+  animation: fadeOut 0.3s ease;
+}
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.actionButton {
+  background-color: $color-primary;
+  color: $color-surface;
+  padding: 10px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $color-primary;
+  }
+}
+
+.closeButton {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: $color-muted;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.3s ease;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+.hidden {
+  pointer-events: none;
+}
+

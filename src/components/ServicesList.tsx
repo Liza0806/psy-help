@@ -1,51 +1,94 @@
 import Button from "./Button";
 import cls from "./ServicesList.module.scss";
 import { useTranslation } from "../hooks/useTranslation";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 const ServicesList = () => {
   const { t } = useTranslation();
+  const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate(); 
+
+  const handleNavigate = () => {
+    localStorage.setItem("scrollPosition", window.scrollY.toString());
+    navigate("/about#directions");
+  };
+  const categories = [
+    {
+      titleKey: t("servicesList.personalProblems"),
+      //@ts-ignore
+      itemsKey: t(`servicesList.personal.item`),
+    },
+    {
+      titleKey: t("servicesList.relationshipProblems"),
+      //@ts-ignore
+      itemsKey: t(`servicesList.relationship.item`),
+    },
+    {
+      titleKey: t("servicesList.mentalDisorders"),
+      //@ts-ignore
+      itemsKey: t(`servicesList.mental.item`),
+    },
+  ];
+  const renderItems = (prefix: string, count: number) => {
+    const items = [];
+    for (let i = 1; i <= count; i++) {
+      //@ts-ignore
+      items.push(<li key={i}>{t(`${prefix}${i}`)}</li>);
+    }
+    return items;
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 992);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section className={cls.wrapper}>
-      <h2>{t('servicesList.title')}</h2>
-      <div className={cls.categories}>
-        <div className={cls.category}>
-          <h3>{t('servicesList.personalProblems')}</h3>
-          <ul>
-            <li>{t('servicesList.personal.item1')}</li>
-            <li>{t('servicesList.personal.item2')}</li>
-            <li>{t('servicesList.personal.item3')}</li>
-            <li>{t('servicesList.personal.item4')}</li>
-            <li>{t('servicesList.personal.item5')}</li>
-            <li>{t('servicesList.personal.item6')}</li>
-            <li>{t('servicesList.personal.item7')}</li>
-          </ul>
+      <h2>{t("servicesList.title")}</h2>
+
+      {!isMobile ? (
+        <div className={cls.categories}>
+          <div className={cls.category}>
+            <h3>{t("servicesList.personalProblems")}</h3>
+            <ul>{renderItems("servicesList.personal.item", 7)}</ul>
+          </div>
+
+          <div className={cls.category}>
+            <h3>{t("servicesList.relationshipProblems")}</h3>
+            <ul>{renderItems("servicesList.relationship.item", 7)}</ul>
+          </div>
+
+          <div className={cls.category}>
+            <h3>{t("servicesList.mentalDisorders")}</h3>
+            <ul>{renderItems("servicesList.mental.item", 6)}</ul>
+          </div>
         </div>
-        <div className={cls.category}>
-          <h3>{t('servicesList.relationshipProblems')}</h3>
-          <ul>
-            <li>{t('servicesList.relationship.item1')}</li>
-            <li>{t('servicesList.relationship.item2')}</li>
-            <li>{t('servicesList.relationship.item3')}</li>
-            <li>{t('servicesList.relationship.item4')}</li>
-            <li>{t('servicesList.relationship.item5')}</li>
-            <li>{t('servicesList.relationship.item6')}</li>
-            <li>{t('servicesList.relationship.item7')}</li>
-          </ul>
+      ) : (
+        <div className={cls.accordionGrid}>
+          <details className={cls.category}>
+            <summary>{t("servicesList.personalProblems")}</summary>
+            <ul>{renderItems("servicesList.personal.item", 7)}</ul>
+          </details>
+
+          <details className={cls.category}>
+            <summary>{t("servicesList.relationshipProblems")}</summary>
+            <ul>{renderItems("servicesList.relationship.item", 7)}</ul>
+          </details>
+
+          <details className={cls.category}>
+            <summary>{t("servicesList.mentalDisorders")}</summary>
+            <ul>{renderItems("servicesList.relationship.item", 6)}</ul>
+          </details>
         </div>
-        <div className={cls.category}>
-          <h3>{t('servicesList.mentalDisorders')}</h3>
-          <ul>
-            <li>{t('servicesList.mental.item1')}</li>
-            <li>{t('servicesList.mental.item2')}</li>
-            <li>{t('servicesList.mental.item3')}</li>
-            <li>{t('servicesList.mental.item4')}</li>
-            <li>{t('servicesList.mental.item5')}</li>
-            <li>{t('servicesList.mental.item6')}</li>
-          </ul>
-        </div>
-      </div>
-      <Button text={t('servicesList.button')} onClick={() => {}} />
+      )}
+
+      <Button text={t("servicesList.button")} onClick={handleNavigate} />
     </section>
   );
 };

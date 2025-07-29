@@ -42,9 +42,7 @@ const About: FC = () => {
       ipsa officia ullam repudiandae, consequatur dicta fuga quasi sit eius
       molestiae iste, error est recusandae excepturi saepe sed eos blanditiis
       consequuntur doloremque? Corrupti, nulla id dolorum rem laudantium
-      delectus quas natus earum voluptatem quia at nobis commodi deleniti
-      repudiandae quasi facere impedit perferendis sapiente ipsam odio qui, sint
-      ipsum illum porro? Ea numquam praesentium, natus sequi laboriosam
+      delectus quas natus osam
       blanditiis quidem beatae tempora expedita cum eaque placeat ab accusantium
       unde sed molestiae eius harum? Rem ad quibusdam quos sed voluptatem ea
       mollitia amet voluptas quam asperiores id nostrum, consequuntur beatae
